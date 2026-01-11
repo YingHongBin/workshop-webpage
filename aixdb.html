@@ -88,11 +88,45 @@
             flex: 1;
         }
 
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .lang-switch button {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .lang-switch button.active {
+            background: #004B8D;
+            color: white;
+        }
+
+        .lang-switch button:hover:not(.active) {
+            background: #f0f0f0;
+        }
 
     </style>
     <noscript data-n-css=""></noscript>
 </head>
 <body class="">
+<div class="lang-switch">
+    <button id="btn-en" class="active" onclick="switchLanguage('en')">EN</button>
+    <button id="btn-zh" onclick="switchLanguage('zh')">中文</button>
+</div>
 <div id="__next">
     <div class="min-h-screen flex flex-col">
         <main class="bg-gray-200">
@@ -104,18 +138,24 @@
                 <div class="flex items-start">
                     <div class="w-full flex flex-col gap-4">
                         <div class="relative hidden md:block">
-                            <h3 class="inline-block font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; font-size: 44px;">When Data Meets AI:<br> System, Learning, and Application</h3>
+                            <h3 class="lang-en inline-block font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; font-size: 44px;">When Data Meets AI:<br> System, Learning, and Application</h3>
+                            <h3 class="lang-zh inline-block font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; font-size: 44px; display: none;">当数据遇见人工智能:<br>系统、学习与应用</h3>
                         </div>
                         <div class="relative hidden md:block flex flex-col" style="align-items: flex-end; padding-top: 20px;">
-                            <h2 class="font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Zhejiang University, Ningbo, China</h2>
-                            <p class="text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Jan 26 - Feb 1, 2026</p>
+                            <h2 class="lang-en font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Zhejiang University, Ningbo, China</h2>
+                            <h2 class="lang-zh font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right; display: none;">浙江大学宁波校区</h2>
+                            <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Jan 26 - Feb 1, 2026</p>
+                            <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right; display: none;">2026年1月26日 - 2月1日</p>
                         </div>
                         <div class="relative md:hidden">
-                            <h2 class="inline-block  drop-shadow-lg text-2xl font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif;">When Data Meets AI:<br> System, Learning, and Application</h2>
+                            <h2 class="lang-en inline-block  drop-shadow-lg text-2xl font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif;">When Data Meets AI:<br> System, Learning, and Application</h2>
+                            <h2 class="lang-zh inline-block  drop-shadow-lg text-2xl font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; display: none;">当数据遇见人工智能:<br>系统、学习与应用</h2>
                         </div>
                         <div class="relative md:hidden flex flex-col" style="padding-top: 10px;">
-                            <h2 class="font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Zhejiang University, Ningbo, China</h2>
-                            <p class="text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Jan 26 - Feb 1, 2026</p>
+                            <h2 class="lang-en font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Zhejiang University, Ningbo, China</h2>
+                            <h2 class="lang-zh font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">浙江大学宁波校区</h2>
+                            <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Jan 26 - Feb 1, 2026</p>
+                            <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">2026年1月26日 - 2月1日</p>
                         </div>
                     </div>
                 </div>
@@ -123,9 +163,12 @@
             <div class="relative mt-20 bg-gray-100 max-w-[70em] mx-auto" style="margin-top:120px; z-index: 10;">
                 <div class="px-5 pt-4 pb-6">
                     <article class="px-0 lg:px-2 pb-6">
-                        <h2 class="uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Abstract</h2>
-                            <p class="mb-4"> <b>When Data Meets AI: System, Learning, and Application</b> is the theme of this year’s workshop. Under this theme, the workshop is dedicated to exploring the latest research breakthroughs and innovative techniques at the fusion of artificial intelligence and database systems. In particular, our goal is to advance the development of next-generation data systems that can better meet end-users’ demands for intelligent and autonomous data management and analytics.</p>      
-                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h3>
+                        <h2 class="lang-en uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Abstract</h2>
+                        <h2 class="lang-zh uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">摘要</h2>
+                        <p class="lang-en mb-4"> <b>When Data Meets AI: System, Learning, and Application</b> is the theme of this year's workshop. Under this theme, the workshop is dedicated to exploring the latest research breakthroughs and innovative techniques at the fusion of artificial intelligence and database systems. In particular, our goal is to advance the development of next-generation data systems that can better meet end-users' demands for intelligent and autonomous data management and analytics.</p>
+                        <p class="lang-zh mb-4" style="display: none;"> <b>当数据遇见人工智能：系统、学习与应用</b>是今年研讨会的主题。在此主题下，研讨会致力于探索人工智能与数据库系统融合的最新研究突破和创新技术。特别是，我们的目标是推进下一代数据系统的发展，更好地满足最终用户对智能化和自主化数据管理与分析的需求。</p>
+                        <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h3>
+                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">研讨会主席</h3>
                         <div class="modern-team-card">
                             <div class="team-card-content">
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
@@ -141,7 +184,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Keynote Speaker</h3>
+                        <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Keynote Speaker</h3>
+                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">主题演讲人</h3>
                         <div class="modern-team-card">
                             <div class="team-card-content">
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
@@ -176,13 +220,14 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Special Panelist</h3>
+                        <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Special Panelist</h3>
+                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">特邀嘉宾</h3>
                         <div class="modern-team-card">
                             <div class="team-card-content">
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
                                 <div class="team-info">
                                     <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-zh" style="display: none;">陈雷</h3>
                                         <h3 class="team-name lang lang-en" style="display: block;">Chen Lei</h3>
                                     </div>
                                     <p class="team-position lang lang-zh" style="display: none;">教授</p>
@@ -197,7 +242,7 @@
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
                                 <div class="team-info">
                                     <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-zh" style="display: none;">王鑫</h3>
                                         <h3 class="team-name lang lang-en" style="display: block;">Wang Xin</h3>
                                     </div>
                                     <p class="team-position lang lang-zh" style="display: none;">教授</p>
@@ -212,19 +257,20 @@
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
                                 <div class="team-info">
                                     <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-zh" style="display: none;">董理</h3>
                                         <h3 class="team-name lang lang-en" style="display: block;"> Dong Li</h3>
                                     </div>
-                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
-                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-position lang lang-zh" style="display: none;">副教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Associate Professor</p>
                                     <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
                                     <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Organization Committee</h3>
+                        <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Organization Committee</h3>
+                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">组织委员会</h3>
                         
-                        <div class="mb-8">
+                        <div class="mb-8 lang-en">
                             <div style="display: flex; width: 100%;">
                                 <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Xie Zhongle</div>
                                 <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Wu Sai</div>
@@ -232,9 +278,18 @@
                                 <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Ying Hongbin</div>
                             </div>
                         </div>
+                        <div class="mb-8 lang-zh">
+                            <div style="display: flex; width: 100%;">
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">谢钟乐</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">伍赛</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">唐燕君</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">应洪彬</div>
+                            </div>
+                        </div>
 
-                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8"  style="font-family: 'Cocogoose', sans-serif;color: #ec5242">PROGRAM</h2>
-                        <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
+                        <h2 class="lang-en uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8"  style="font-family: 'Cocogoose', sans-serif;color: #ec5242">PROGRAM</h2>
+                        <h2 class="lang-zh uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8"  style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">日程安排</h2>
+                        <div class="overflow-x-auto shadow-lg rounded-lg mb-8 lang-en">
                             <table class="w-full border-collapse bg-white" style="border: 2px solid #374151;">
                                 <thead>
                                     <tr class="bg-[#004B8D] text-white">
@@ -321,51 +376,158 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="overflow-x-auto shadow-lg rounded-lg mb-8 lang-zh">
+                            <table class="w-full border-collapse bg-white" style="border: 2px solid #374151;">
+                                <thead>
+                                    <tr class="bg-[#004B8D] text-white">
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%;">日期</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%;">时间</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%;">活动</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 25%;">演讲者</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200 border-b border-gray-200 bg-blue-50">
+                                        <td class="px-6 py-4 font-semibold text-[#004B8D] text-lg align-middle" rowspan="7" style="text-align: center; background-color: #EFF6FF;">1月27日</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="4" style="text-align: center; background-color: #EFF6FF; width: 8%;">上午</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF; width: 17%;">09:30 - 09:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>合影及开幕致辞</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;">黄铭钧教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">09:40 - 10:20</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>主题演讲 1</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Divesh教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">10:25 - 11:05</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>主题演讲 2</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Sihem教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">11:10 - 11:50</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>特别报告</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 陈雷教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">下午</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:00 - 14:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 1</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 王鑫教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:45 - 15:25</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 2</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 董理副教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">15:30 - 16:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 3</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 冯尊磊副教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200 border-b border-gray-200 bg-blue-50">
+                                        <td class="px-6 py-4 font-semibold text-[#004B8D] text-lg align-middle" rowspan="6" style="text-align: center; background-color: #EFF6FF;">1月28日</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">上午</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF; width: 17%;">09:30 - 10:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 4</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Anh教授</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">10:15 - 10:55</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 5</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Trung博士</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">11:00 - 11:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 6</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Minh博士</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">下午</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:00 - 14:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 7</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 彭程研究员</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:45 - 15:25</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 8</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 待定 </td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">15:30 - 16:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>研讨会 9</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> 待定</td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
                         
-                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
+                        <h2 class="lang-en uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
                             Registration</h2>
+                        <h2 class="lang-zh uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">
+                            报名注册</h2>
                         
                         <form class="mb-8 bg-white p-6 rounded-lg shadow-md max-w-2xl">
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
+                                <label for="name" class="lang-en block text-gray-700 font-semibold mb-2">Name *</label>
+                                <label for="name" class="lang-zh block text-gray-700 font-semibold mb-2" style="display: none;">姓名 *</label>
                                 <input type="text" id="name" name="name" required 
                                        class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                        style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
-                                       placeholder="Enter your full name">
+                                       placeholder="Enter your full name"
+                                       data-placeholder-en="Enter your full name"
+                                       data-placeholder-zh="请输入您的姓名">
                             </div>
                             
                             <div class="mb-4">
-                                <label for="mobile" class="block text-gray-700 font-semibold mb-2">Mobile *</label>
+                                <label for="mobile" class="lang-en block text-gray-700 font-semibold mb-2">Mobile *</label>
+                                <label for="mobile" class="lang-zh block text-gray-700 font-semibold mb-2" style="display: none;">手机号码 *</label>
                                 <input type="tel" id="mobile" name="mobile" required 
                                        class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                        style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
-                                       placeholder="Enter your mobile number">
+                                       placeholder="Enter your mobile number"
+                                       data-placeholder-en="Enter your mobile number"
+                                       data-placeholder-zh="请输入您的手机号码">
                             </div>
                             
                             <div class="mb-6">
-                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                <label for="email" class="lang-en block text-gray-700 font-semibold mb-2">Email *</label>
+                                <label for="email" class="lang-zh block text-gray-700 font-semibold mb-2" style="display: none;">电子邮箱 *</label>
                                 <input type="email" id="email" name="email" required 
                                        class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                        style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
-                                       placeholder="Enter your email address">
+                                       placeholder="Enter your email address"
+                                       data-placeholder-en="Enter your email address"
+                                       data-placeholder-zh="请输入您的电子邮箱">
                             </div>
                             
                             <button type="submit" 
-                                    class="w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline;">
+                                    class="lang-en w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline;">
                                 Submit Registration
+                            </button>
+                            <button type="submit" 
+                                    class="lang-zh w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline; display: none;">
+                                提交报名
                             </button>
                         </form>
                         
-                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
+                        <h2 class="lang-en uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
                             Contact Information</h2>
-                           <h3 class="font-bold text-l text-gray-600 mb-4"> If you are interested, please contact: </h3>
+                        <h2 class="lang-zh uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">
+                            联系信息</h2>
+                        <h3 class="lang-en font-bold text-l text-gray-600 mb-4"> If you are interested, please contact: </h3>
+                        <h3 class="lang-zh font-bold text-l text-gray-600 mb-4" style="display: none;"> 如果您感兴趣，请联系： </h3>
                         <ul class="list-disc list-inside mb-4">
-                            <li><strong>Zhongle XIE</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">xiezl@zju.edu.cn</a>
+                            <li class="lang-en"><strong>Zhongle XIE</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">xiezl@zju.edu.cn</a>
+                            <li class="lang-zh"><strong>谢钟乐</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">xiezl@zju.edu.cn</a>
                             </li>
                             <!-- <li><strong>Peng LU</strong>: <a class="cmt" href="mailto:">s-zhang@comp.nus.edu.sg</a>
                             </li> -->
                         </ul>
-                        <h3 class="font-bold text-l text-gray-600"> On behalf of the workshop chair: Prof Beng Chin Ooi. </h3>
+                        <h3 class="lang-en font-bold text-l text-gray-600"> On behalf of the workshop chair: Prof Beng Chin Ooi. </h3>
+                        <h3 class="lang-zh font-bold text-l text-gray-600" style="display: none;"> 代表研讨会主席：黄铭钧教授 </h3>
 
                     </article>
                 </div>
@@ -379,5 +541,43 @@
         </footer>
     </div>
 </div>
+<script>
+function switchLanguage(lang) {
+    // 更新按钮状态
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    
+    // 显示/隐藏对应语言内容
+    const enElements = document.querySelectorAll('.lang-en');
+    const zhElements = document.querySelectorAll('.lang-zh');
+    
+    if (lang === 'en') {
+        enElements.forEach(el => el.style.display = 'block');
+        zhElements.forEach(el => el.style.display = 'none');
+    } else {
+        enElements.forEach(el => el.style.display = 'none');
+        zhElements.forEach(el => el.style.display = 'block');
+    }
+    
+    // 更新input placeholder
+    const inputs = document.querySelectorAll('input[data-placeholder-en]');
+    inputs.forEach(input => {
+        if (lang === 'en') {
+            input.placeholder = input.getAttribute('data-placeholder-en');
+        } else {
+            input.placeholder = input.getAttribute('data-placeholder-zh');
+        }
+    });
+    
+    // 保存用户选择
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// 页面加载时恢复用户之前的语言选择
+window.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    switchLanguage(savedLang);
+});
+</script>
 </body>
 </html>
