@@ -17,181 +17,346 @@
           type="font/woff2"/>
     <link as="style" href="./aixdb.css" rel="preload"/>
     <link data-n-g="" href="./aixdb.css" rel="stylesheet"/>
+    <style>
+        @font-face {
+            font-family: 'Cocogoose';
+            src: url('./Cocogoose_trial.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .modern-team-card {
+            background: #f3ececd2;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card-content {
+            display: flex;
+            padding: 20px;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .team-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .team-position {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin: 0 0 8px 0;
+            flex-shrink: 0;
+        }
+
+        .team-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 8em;
+            position: relative;
+            flex: 1;
+        }
+
+
+    </style>
     <noscript data-n-css=""></noscript>
 </head>
 <body class="">
 <div id="__next">
     <div class="min-h-screen flex flex-col">
         <main class="bg-gray-200">
-            <div class="h-[500px] w-full absolute top-0"><img alt="Zhejiang University campus" class="w-full h-full object-cover" src="./gz2.jpg"/></div>
-            <div class="relative max-w-[70em] mx-auto pr-3.5 mb-48">
+            <div class="h-[500px] w-full absolute top-0" style="pointer-events: none;">
+                <img alt="Zhejiang University campus" class="w-full h-full object-cover object-top" src="./gz2.jpg" style="pointer-events: auto;"/>
+                <div class="absolute top-0 left-0 w-full h-full" style="background: rgba(0,0,0,0.4); pointer-events: none;"></div>
+            </div>
+            <div class="relative max-w-[70em] mx-auto pr-3.5 mb-48" style="padding-top: 80px;">
                 <div class="flex items-start">
-                    <div class="w-full flex flex-row items-center justify-between">
-                        <div class="relative md:hidden">
-                            <h2 class="inline-block text-[#004B8D] drop-shadow-lg text-xl font-extrabold tracking-tight select-none cursor-default">AIxDB2025</h2>
-                        </div>
-                        <div class="relative md:hidden flex flex-col items-end">
-                            <h2 class="font-bold tracking-wide text-2xl" style="color: #004B8D;">Zhejiang University<br/>Ningbo, China</h2>
-                            <p class="text-lg" style="color: #004B8D;">Aug 23 - Aug 24, 2025</p>
-                        </div>
+                    <div class="w-full flex flex-col gap-4">
                         <div class="relative hidden md:block">
-                            <h3 class="inline-block text-[#004B8D] drop-shadow-lg text-[6.3em] font-extrabold tracking-tight select-none cursor-default">AIxDB2025</h3>
+                            <h3 class="inline-block font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; font-size: 44px;">When Data Meets AI:<br> System, Learning, and Application</h3>
                         </div>
-                        <div class="relative hidden md:block flex flex-col items-end">
-                            <h2 class="font-bold tracking-wide text-2xl" style="color: #004B8D;">Zhejiang University, Ningbo, China</h2>
-                            <p class="text-lg" style="color: #004B8D;">Aug 23 - Aug 24, 2025</p>
+                        <div class="relative hidden md:block flex flex-col" style="align-items: flex-end; padding-top: 20px;">
+                            <h2 class="font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Zhejiang University, Ningbo, China</h2>
+                            <p class="text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Jan 26 - Feb 1, 2026</p>
+                        </div>
+                        <div class="relative md:hidden">
+                            <h2 class="inline-block  drop-shadow-lg text-2xl font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif;">When Data Meets AI:<br> System, Learning, and Application</h2>
+                        </div>
+                        <div class="relative md:hidden flex flex-col" style="padding-top: 10px;">
+                            <h2 class="font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Zhejiang University, Ningbo, China</h2>
+                            <p class="text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Jan 26 - Feb 1, 2026</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="relative mt-20 bg-gray-100 md:bg-gray-100/90 max-w-[70em] mx-auto" style="margin-top:230px">
+            <div class="relative mt-20 bg-gray-100 max-w-[70em] mx-auto" style="margin-top:120px; z-index: 10;">
                 <div class="px-5 pt-4 pb-6">
-                    <article class="px-0 lg:px-2 pb-6"><h2
-                            class="uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5">Abstract</h2>
-                            <p class="mb-4"> With the rapid advancements in artificial intelligence (AI), we are witnessing a surge in AI-powered applications across sectors, which aim to relieve the burden on end-users by offering users personalized, automated AI-enhanced analytics and predictions.
-                                In the healthcare sector, for example, clinicians require AI-powered assistance for disease progression modeling. 
-                                Similarly, in the financial industry, AI-driven algorithms can analyze market trends, manage portfolios, and even predict financial risks.
-                                At present, the realms of AI models and data systems (aka databases or data management systems) exist as independent fields, each fundamental in its own right but isolated in functionality.
-                                This separation makes the construction of emerging AI applications fundamentally costly.
-                                Data scientists need to design an AI model and create a data system separately, navigating the complexities of both systems, which hinders the user-friendliness and operational efficiency of AI applications.</p>
-                                
-                                <p class="mb-4"> To dismantle the barriers preventing end-users from fully embracing AI technologies, data systems, the cornerstone of mainstream online applications integral to our everyday lives, are set to experience a transformative revolution with the imminent fusion of AI and DB (<span class="font-semibold">AIxDB</span>).
-                                This workshop, the 2nd International Workshop on <span class="font-semibold">AIxDB</span>, aims to explore this synergy, delving into the latest research breakthroughs and innovative techniques at the fusion of AI and DB.
-                                Despite considerable progress in integrating AI with data systems, a significant gap remains between the potential of this integration and its current state of usability.
-                                Bridging this gap requires a seamless integration of AI and database technologies, creating a unified data system that transcends the capabilities of each in isolation.
-                                Through engaging researchers, developers, and practitioners in rigorous discussions, the workshop seeks to advance the development of next-generation data systems that meet the needs of end-users for intelligent and autonomous data systems. </p>                                
-                        <h3 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8">Topics of
-                            Interest</h3>
-                        <h3 class="font-bold text-l text-gray-600 mb-4">Relevant topics include, but are not limited
-                            to:</h3>
-                        <ul class="list-disc list-inside">
-                            <li>In-database AI techniques for data analytics</li>
-                            <li>Intelligent and self-driving data system design</li>
-                            <li>Secure and privacy-preserving AI×DB</li>
-                            <li>Performance modeling for AI×DB</li>
-                            <li>AI use cases in various domains</li>
-                        </ul>
+                    <article class="px-0 lg:px-2 pb-6">
+                        <h2 class="uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Abstract</h2>
+                            <p class="mb-4"> <b>When Data Meets AI: System, Learning, and Application</b> is the theme of this year’s workshop. Under this theme, the workshop is dedicated to exploring the latest research breakthroughs and innovative techniques at the fusion of artificial intelligence and database systems. In particular, our goal is to advance the development of next-generation data systems that can better meet end-users’ demands for intelligent and autonomous data management and analytics.</p>      
+                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h3>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-en" style="display: block;">OOI Beng Chin</h3>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Keynote Speaker</h3>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                        <h3 class="team-name lang lang-zh" style="display: none;">Divesh</h3>
+                                        <h3 class="team-name lang lang-en" style="display: block;">Divesh</h3>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                    <h3 class="team-name lang lang-zh" style="display: none;">Sihem</h3>
+                                    <h3 class="team-name lang lang-en" style="display: block;">Sihem</h3>
+                                    <div class="team-actions">
+                                        
+                                        <a href="https://ooibc88.github.io/" class="team-action-btn" title="Website" target="_blank"><i class="fas fa-globe"></i></a>
+                                    </div>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Special Panelist</h3>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-en" style="display: block;">Chen Lei</h3>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-en" style="display: block;">Wang Xin</h3>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modern-team-card">
+                            <div class="team-card-content">
+                                <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
+                                <div class="team-info">
+                                    <div class="team-header">
+                                        <h3 class="team-name lang lang-zh" style="display: none;">黄铭钧</h3>
+                                        <h3 class="team-name lang lang-en" style="display: block;"> Dong Li</h3>
+                                    </div>
+                                    <p class="team-position lang lang-zh" style="display: none;">教授</p>
+                                    <p class="team-position lang lang-en" style="display: block;">Professor</p>
+                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学求是讲席教授、浙江大学软件学院教授、北京大学客座讲席教授 、清华大学杰出访问教授，同时担任中国科学院外籍院士、新加坡科学院院士、新加坡工程院院士、欧洲人文和自然科学院外籍院士、ACM Fellow 、IEEE Fellow、CCF会士。</p>
+                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Qiushi Chair Professor at Zhejiang University and professor at the School of Software Technology, Zhejiang University. Visiting Chair Professor at Peking University, and Distinguished Visiting Professor at Tsinghua University. He is a Foreign Member of the Chinese Academy of Sciences, Fellow of the Singapore Academy of Sciences, Fellow of the Singapore Academy of Engineering, Foreign Member of the European Academy of Sciences and Arts, ACM Fellow, IEEE Fellow, and CCF Fellow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Organization Committee</h3>
+                        
+                        <div class="mb-8">
+                            <div style="display: flex; width: 100%;">
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Xie Zhongle</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Wu Sai</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Tang Yanjun</div>
+                                <div style="flex: 1; text-align: center;" class="text-gray-800 text-lg">Ying Hongbin</div>
+                            </div>
+                        </div>
 
-                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8">PROGRAM</h2>
+                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8"  style="font-family: 'Cocogoose', sans-serif;color: #ec5242">PROGRAM</h2>
                         <div class="overflow-x-auto shadow-lg rounded-lg mb-8">
                             <table class="w-full border-collapse bg-white" style="border: 2px solid #374151;">
                                 <thead>
                                     <tr class="bg-[#004B8D] text-white">
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D] w-1/4" style="text-align: center;">Date</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D] w-1/4" style="text-align: center;">Time</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D] w-2/4" style="text-align: center;">Event</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%;">Date</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%;">Time</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%;">Event</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 25%;">Speaker</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="hover:bg-blue-50 transition-colors duration-200 border-b border-gray-200 bg-blue-50">
-                                        <td class="px-6 py-4 font-semibold text-[#004B8D] text-lg align-middle" rowspan="11" style="text-align: center; background-color: #EFF6FF;">Aug 23</td>
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">09:00 - 09:15</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Opening and Welcome</em>, Prof Beng Chin Ooi, Zhejiang University</td>
+                                        <td class="px-6 py-4 font-semibold text-[#004B8D] text-lg align-middle" rowspan="7" style="text-align: center; background-color: #EFF6FF;">Jan 27</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="4" style="text-align: center; background-color: #EFF6FF; width: 8%;">AM</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF; width: 17%;">09:30 - 09:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Photo & Opening Talk</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. Ooi </td>
                                     </tr>
                                     <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #F0FDF4;">09:15 - 09:45</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #F0FDF4;"><em>Invited Seminar</em>, Guoyu Hu, National University of Singapore</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">09:40 - 10:20</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Keynote 1</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. Divesh</td>
                                     </tr>
                                     <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #F0FDF4;">09:45 - 10:15</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #F0FDF4;"><em>Invited Seminar</em>, Cong Yue, National University of Singapore</td>
-                                    </tr>
-                                    <tr class="hover:bg-yellow-50 transition-colors duration-200 border-b border-gray-200 bg-yellow-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #FFFBEB;">10:15 - 10:30</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #FFFBEB;"><em>Coffee Break</em></td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">10:25 - 11:05</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Keynote 2</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. Sihem</td>
                                     </tr>
                                     <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #F0FDF4;">10:30 - 11:00</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #F0FDF4;"><em>Invited Seminar</em>, Jiaqi Zhu, National University of Singapore</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">11:10 - 11:50</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Special Talk</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. Chen Lei</td>
                                     </tr>
                                     <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #F0FDF4;">11:00 - 11:30</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #F0FDF4;"><em>Invited Seminar</em>, Changshuo Liu, National University of Singapore</td>
-                                    </tr>
-                                    <tr class="hover:bg-orange-50 transition-colors duration-200 border-b border-gray-200 bg-orange-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #FFF7ED;">11:30 - 13:30</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #FFF7ED;"><em>Lunch Break</em></td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">PM</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:00 - 14:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 1</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. Wang Xin</td>
                                     </tr>
                                     <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #F0FDF4;">13:30 - 14:00</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #F0FDF4;"><em>Invited Seminar</em>, Zhanhao Zhao, National University of Singapore</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:45 - 15:25</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 2</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Associate Prof. Dong Li</td>
                                     </tr>
-                                    <tr class="hover:bg-yellow-50 transition-colors duration-200 border-b border-gray-200 bg-yellow-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #FFFBEB;">14:00 - 14:15</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #FFFBEB;"><em>Coffee Break</em></td>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">15:30 - 16:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 3</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Associate Prof. Feng Zunlei</td>
                                     </tr>
-                                    <tr class="hover:bg-purple-50 transition-colors duration-200 border-b border-gray-200 bg-purple-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #FAF5FF;">14:15 - 16:00</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #FAF5FF;">
-                                            <em>Panel Discussion</em>: Future of AIxDB<br/>
-                                            <strong>Participants:</strong><br/>
-                                            • Meihui ZHANG, Professor, Beijing Institute of Technology<br/>
-                                            • Yanyan SHEN, Associate Professor, Shanghai Jiao Tong University<br/>
-                                            • Yuncheng WU, Associate Professor, Renmin University of China<br/>
-                                            • Zhaojing LUO, Professor, Beijing Institute of Technology
-                                        </td>
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200 border-b border-gray-200 bg-blue-50">
+                                        <td class="px-6 py-4 font-semibold text-[#004B8D] text-lg align-middle" rowspan="6" style="text-align: center; background-color: #EFF6FF;">Jan 28</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">AM</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF; width: 17%;">09:30 - 10:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 4</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Prof. DINH/TIEN TUAN ANH </td>
                                     </tr>
-                                    <tr class="hover:bg-indigo-50 transition-colors duration-200 border-b border-gray-200 bg-indigo-50">
-                                        <td class="px-6 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EEF2FF;">16:00 - 18:30</td>
-                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EEF2FF;"><em>Poster Session & Networking</em></td>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">10:15 - 10:55</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 5</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Dr. TA/QUANG TRUNG</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">11:00 - 11:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 6</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Dr. HO/NHUT MINH</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium align-middle" rowspan="3" style="text-align: center; background-color: #EFF6FF; width: 8%;">PM</td>
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:00 - 14:40</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 7</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> Dr. Peng Cheng</td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">14:45 - 15:25</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 8</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> TBD </td>
+                                    </tr>
+                                    <tr class="hover:bg-green-50 transition-colors duration-200 border-b border-gray-200 bg-green-50">
+                                        <td class="px-3 py-4 text-gray-700 font-medium" style="text-align: center; background-color: #EFF6FF;">15:30 - 16:10</td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"><em>Seminar 9</em></td>
+                                        <td class="px-6 py-4 text-gray-800" style="text-align: center; background-color: #EFF6FF;"> TBD</td>
                                     </tr>
                                     
-                                    <!-- <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3 font-semibold align-middle" rowspan="6" style="text-align: center; border: 2px solid #9CA3AF;">Aug 24</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">09:00 - 10:30</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Yanyan SHEN</strong>, Associate Professor, Shanghai Jiao Tong University</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">10:30 - 10:45</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Coffee Break</em></td>
-                                    </tr>
-                                    <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">10:45 - 12:15</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Yuncheng WU</strong>, Associate Professor, Renmin University of China</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">12:15 - 13:30</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Lunch Break</em></td>
-                                    </tr>
-                                    <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">13:30 - 15:00</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Panel Discussion</strong>: Industry Applications</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">15:00 - 18:00</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Workshop & Demo Session</em></td>
-                                    </tr>
                                     
-                                    <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3 font-semibold align-middle" rowspan="6" style="text-align: center; border: 2px solid #9CA3AF;">Aug 25</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">09:00 - 10:30</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Zhaojing LUO</strong>, Professor, Beijing Institute of Technology</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">10:30 - 10:45</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Coffee Break</em></td>
-                                    </tr>
-                                    <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">10:45 - 12:15</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Panel Discussion</strong>: Research Challenges</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">12:15 - 13:30</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Lunch Break</em></td>
-                                    </tr>
-                                    <tr class="bg-white">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">13:30 - 15:00</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><strong>Closing Session</strong> & Awards</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;">15:00 - 18:00</td>
-                                        <td class="border-2 border-gray-400 px-4 py-3" style="text-align: center; border: 2px solid #9CA3AF;"><em>Conference Dinner</em></td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
                         
-                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8">
+                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
+                            Registration</h2>
+                        
+                        <form class="mb-8 bg-white p-6 rounded-lg shadow-md max-w-2xl">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
+                                       placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="mobile" class="block text-gray-700 font-semibold mb-2">Mobile *</label>
+                                <input type="tel" id="mobile" name="mobile" required 
+                                       class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
+                                       placeholder="Enter your mobile number">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       style="border-radius: 8px; padding-left: 16px; padding-right: 16px;"
+                                       placeholder="Enter your email address">
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline;">
+                                Submit Registration
+                            </button>
+                        </form>
+                        
+                        <h2 class="uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
                             Contact Information</h2>
                            <h3 class="font-bold text-l text-gray-600 mb-4"> If you are interested, please contact: </h3>
                         <ul class="list-disc list-inside mb-4">
@@ -208,7 +373,7 @@
         </main>
         <footer class="max-w-[70em] mx-auto pt-8 pb-32 w-full">
             <div class="mx-5 flex flex-col md:flex-row gap-y-2 lg:px-0 items-start justify-between text-gray-600"><small
-                    class=""><span class="font-defaultSans">©</span> 2025 2nd International Workshop on AIxDB (AIxDB 2025) &nbsp | &nbsp <a class="cmt" href="https://www.nbdataxai.com/">ZJU Data System Research Group</a>&nbsp | &nbsp <a class="cmt" href="https://www.comp.nus.edu.sg/~dbsystem/">NUS DBSystem Research Group</a>
+                    class=""><span class="font-defaultSans">©</span> 2026 3nd International Workshop on AIxDB (AIxDB 2026) &nbsp | &nbsp <a class="cmt" href="https://www.nbdataxai.com/">ZJU Data System Research Group</a>&nbsp | &nbsp <a class="cmt" href="https://www.comp.nus.edu.sg/~dbsystem/">NUS DBSystem Research Group</a>
                 </small>
             </div>
         </footer>
