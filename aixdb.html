@@ -119,6 +119,28 @@
             background: #f0f0f0;
         }
 
+        @media (min-width: 992px) {
+            .col-lg-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        .row>[class*="col-"] {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
     </style>
     <noscript data-n-css=""></noscript>
 </head>
@@ -168,9 +190,9 @@
                         <p class="lang-en mb-4"> The deep integration of data systems and artificial intelligence is reshaping how data is collected, managed, and transformed into knowledge and decisions. Modern AI workloads, ranging from large language models and multimodal learning to domain-specific analytics, are increasingly data-centric and system-driven, relying on scalable data infrastructures, efficient data pipelines, and robust data governance. In data-intensive domains such as healthcare and enterprise intelligence, these challenges are further amplified by data heterogeneity, quality requirements, privacy constraints, and the need for trustworthy and efficient AI.<br>
                         The workshop Data × AI: Systems, Learning, and Applications provides a focused forum to explore this convergence from a holistic perspective. It brings together research on system foundations, learning paradigms, and real-world applications. By bridging these layers, the workshop aims to highlight emerging challenges, share principled solutions, and identify open research directions that span the full Data × AI stack.<br>
                         We warmly welcome researchers and practitioners from academia and industry to join this workshop. Through invited talks, technical presentations, and open discussions, the workshop seeks to foster cross-disciplinary collaboration across data management, AI, and application domains, and to advance a shared understanding of how Data × AI co-design can enable robust, efficient, and trustworthy intelligent systems.</p>
-                        <p class="lang-zh mb-4" style="display: none;"> 数据系统与人工智能的深度融合正在重塑数据的采集、管理以及向知识与决策转化的方式。现代人工智能工作负载涵盖大语言模型、多模态学习以及领域特定分析等，日益呈现出以数据为中心、以系统为驱动的特征，依赖于可扩展的数据基础设施、高效的数据流水线以及健全的数据治理。在医疗健康和企业智能等数据密集型领域中，数据异构性、质量要求、隐私约束以及对可信高效人工智能的需求，使这些挑战进一步加剧。
+                        <p class="lang-zh mb-4" style="display: none;"> 数据系统与人工智能的深度融合正在重塑数据的采集、管理以及向知识与决策转化的方式。现代人工智能工作负载涵盖大语言模型、多模态学习以及领域特定分析等，日益呈现出以数据为中心、以系统为驱动的特征，依赖于可扩展的数据基础设施、高效的数据流水线以及健全的数据治理。在医疗健康和商业智能等数据密集型领域中，数据异构性、质量要求、隐私约束以及对可信高效人工智能的需求，使这些挑战进一步加剧。
                         <br>
-                        “Data × AI: Systems, Learning, and Applications”研讨会从整体视角聚焦这一融合趋势，汇聚系统基础、学习范式与实际应用等方面的研究成果。通过贯通这些层面，研讨会旨在揭示新兴挑战，分享有理论支撑的解决思路，并探讨贯穿整个 Data × AI 技术栈的开放性研究方向。
+                        “Data × AI: 系统、智能与应用”研讨会从整体视角聚焦这一融合趋势，汇聚系统基础、学习范式与实际应用等方面的研究成果。通过贯通这些层面，研讨会旨在揭示新兴挑战，分享有理论支撑的解决思路，并探讨贯穿整个 Data × AI 技术栈的开放性研究方向。
                         <br>
                         我们诚挚欢迎来自学术界和工业界的研究人员与实践者参加本次研讨会。通过特邀报告、学术论文展示与开放式讨论，研讨会将促进数据管理、人工智能及应用领域之间的交叉合作，推动形成对 Data × AI 协同设计如何支撑稳健、高效、可信智能系统的共同认识。</p>
                         <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h3>
@@ -190,96 +212,114 @@
                         </div>
                         <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Keynote Speaker</h3>
                         <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">主题演讲人</h3>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://divesh.net/wp-content/uploads/2018/09/divesh-2018.jpg?w=300" alt="Divesh Srivastava" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">Divesh Srivastava</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">Divesh Srivastava</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://divesh.net/wp-content/uploads/2018/09/divesh-2018.jpg?w=300" alt="Divesh Srivastava" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">Divesh Srivastava</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">Divesh Srivastava</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">AT&T 数据库研究负责人、ACM Fellow</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">AT&T Research Lab, ACM Fellow</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">AT&T 数据库研究负责人、ACM Fellow</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">AT&T Research Lab, ACM Fellow</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="http://lig-membres.imag.fr/amery/wp-content/uploads/sites/148/2024/10/Sihem2024.jpg" alt="Sihem Amer-Yahia" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">Sihem Amer-Yahia</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">Sihem Amer-Yahia</h3>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="http://lig-membres.imag.fr/amery/wp-content/uploads/sites/148/2024/10/Sihem2024.jpg" alt="Sihem Amer-Yahia" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">Sihem Amer-Yahia</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">Sihem Amer-Yahia</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">法国国家科学研究中心主任、格勒诺布尔信息实验室副主任</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">CNRS Research Director, Deputy Director of Laboratoire d’Informatique de Grenoble</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">法国国家科学研究中心主任、格勒诺布尔信息实验室副主任</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">CNRS Research Director, Deputy Director of Laboratoire d’Informatique de Grenoble</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://cse.hkust.edu.hk/~leichen/index_files/image004.jpg" alt="陈雷" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">陈雷</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">Chen Lei</h3>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://cse.hkust.edu.hk/~leichen/index_files/image004.jpg" alt="陈雷" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">陈雷</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">Chen Lei</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">香港科技大学（广州）信息枢纽院长、ACM/IEEE Fellow</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Dean of Information Hub at HKUST(GUANGZHOU), ACM/IEEE Fellow</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">香港科技大学（广州）信息枢纽院长、ACM/IEEE Fellow</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Dean of Information Hub at HKUST(GUANGZHOU), ACM/IEEE Fellow</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://cic.tju.edu.cn/virtual_attach_file.vsb?afc=VLzl2sUzlaLRARndzUan7MVMmLaLNr-koRUYozGiMRLaozC0gihFp2hmCIa0n1yaLkyPokyaMRv8o7-ZU8-iLRAfnzAfLRGsLR94n7UPU8nFL8-DnmTkLNWFLzfVM7-Jqjfjo4OeoDMXCYhXptQ0g47aM4N0Lmv8LYbw62W8c&oid=1518250116&tid=1079&nid=2743&e=.jpg" alt="wang xin" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">王鑫</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">Wang Xin</h3>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://cic.tju.edu.cn/virtual_attach_file.vsb?afc=VLzl2sUzlaLRARndzUan7MVMmLaLNr-koRUYozGiMRLaozC0gihFp2hmCIa0n1yaLkyPokyaMRv8o7-ZU8-iLRAfnzAfLRGsLR94n7UPU8nFL8-DnmTkLNWFLzfVM7-Jqjfjo4OeoDMXCYhXptQ0g47aM4N0Lmv8LYbw62W8c&oid=1518250116&tid=1079&nid=2743&e=.jpg" alt="wang xin" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">王鑫</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">Wang Xin</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">天津大学人工智能学院书记、副院长、CCF信息系统专委会秘书长</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Vice Dean, AI School, Tianjin University; Secretary General of CCF TCIS</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">天津大学人工智能学院书记、副院长、CCF信息系统专委会秘书长</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Vice Dean, AI School, Tianjin University; Secretary General of CCF TCIS</p>
                                 </div>
                             </div>
                         </div>
                         <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Special Panelist</h3>
                         <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">特邀嘉宾</h3>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://person.zju.edu.cn/person//attachments/2020-04/0420031726-296331173.png" alt="fengzunlei" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">冯尊磊</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">Feng Zunlei</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://eecs.nbu.edu.cn/__local/A/C3/BF/59FBC9A537C021D74CA66D499EF_09D60A5C_765E.jpg" alt="董理" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">董理</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;"> Dong Li</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">宁波大学计算机系主任</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Chair of the Department of Computer Science, Ningbo University</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学软件学院副教授</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Associate Professor, College of Software Technology, Zhejiang University</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://avatars.githubusercontent.com/u/52648553?s=400&u=459cab45bd94576765077b2e33c881268eef298e&v=4" alt="DINH/TIEN TUAN ANH" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">DINH/TIEN TUAN ANH</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;">DINH/TIEN TUAN ANH</h3>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://avatars.githubusercontent.com/u/52648553?s=400&u=459cab45bd94576765077b2e33c881268eef298e&v=4" alt="DINH/TIEN TUAN ANH" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">DINH/TIEN TUAN ANH</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">DINH/TIEN TUAN ANH</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">迪肯大学</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Deakin University</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">迪肯大学</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Deakin University</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modern-team-card">
-                            <div class="team-card-content">
-                                <img src="https://eecs.nbu.edu.cn/__local/A/C3/BF/59FBC9A537C021D74CA66D499EF_09D60A5C_765E.jpg" alt="董理" class="team-avatar">
-                                <div class="team-info">
-                                    <div class="team-header">
-                                        <h3 class="team-name lang lang-zh" style="display: none;">董理</h3>
-                                        <h3 class="team-name lang lang-en" style="display: block;"> Dong Li</h3>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="modern-team-card">
+                                    <div class="team-card-content">
+                                        <img src="https://person.zju.edu.cn/person//attachments/2020-04/0420031726-296331173.png" alt="fengzunlei" class="team-avatar">
+                                        <div class="team-info">
+                                            <div class="team-header">
+                                                <h3 class="team-name lang lang-zh" style="display: none;">冯尊磊</h3>
+                                                <h3 class="team-name lang lang-en" style="display: block;">Feng Zunlei</h3>
+                                            </div>
+                                            <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">浙江大学软件学院副教授</p>
+                                            <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Associate Professor, College of Software Technology, Zhejiang University</p>
+                                        </div>
                                     </div>
-                                    <p class="team-description lang lang-zh" style="white-space: pre-wrap; display: none;">宁波大学计算机系主任</p>
-                                    <p class="team-description lang lang-en" style="white-space: pre-wrap; display: block;">Chair of the Department of Computer Science, Ningbo University</p>
                                 </div>
                             </div>
                         </div>
@@ -499,59 +539,37 @@
                                        data-placeholder-en="Enter your email address"
                                        data-placeholder-zh="请输入您的电子邮箱">
                             </div>
-                            <blockquote style="margin-bottom: 20px;">
-                                <p class="lang-zh font-bold text-l text-gray-600"> 注：参会者根据报名注册信息提供自助午餐 </p>
-                                <p class="lang-en font-bold text-l text-gray-600"> Note: Participants will be provided with a buffet lunch based on the registration information </p>
-                            </blockquote>
-                            
                             <button type="submit" 
                                     class="lang-en w-full font-bold transition-colors duration-200" 
-                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-top: 20px;"
+                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin: 20px;"
                                     onmouseover="this.style.backgroundColor='#111111'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';"
                                     onmouseout="this.style.backgroundColor='##333333'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
                                 Submit Registration
                             </button>
                             <button type="submit" 
                                     class="lang-zh w-full font-bold transition-colors duration-200" 
-                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: none; margin-top: 20px;"
+                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: none; margin: 20px;"
                                     onmouseover="this.style.backgroundColor='#111111'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';"
                                     onmouseout="this.style.backgroundColor='#333333'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
                                 提交报名
                             </button>
+                            <blockquote style="margin-bottom: 20px;">
+                                <p class="lang-zh font-bold text-l text-gray-600" style="text-align: center;"> 参会者根据报名注册信息提供自助午餐 </p>
+                                <p class="lang-en font-bold text-l text-gray-600" style="text-align: center;"> Participants will be provided with a buffet lunch based on the registration information </p>
+                            </blockquote>
                         </form>
                         
                         <h2 class="lang-en uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">
                             Contact Information</h2>
                         <h2 class="lang-zh uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">
                             联系信息</h2>
-                        <!-- <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Organization Committee</h3>
-                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">组织委员会</h3> -->
-                        <h3 class="lang-en font-bold text-l text-gray-600 mb-4"> Organization Committee: </h3>
-                        <h3 class="lang-zh font-bold text-l text-gray-600 mb-4" style="display: none;"> 组织委员会： </h3>
-                        
-                        <ul class="mb-8 lang-en" style="display: flex; width: 100%; list-style: none; padding: 0;">
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">Xie Zhongle</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">Wu Sai</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">Tang Yanjun</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">Ying Hongbin</li>
-                        </ul>
-                        <ul class="mb-8 lang-zh" style="display: flex; width: 100%; list-style: none; padding: 0;">
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">谢钟乐</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">伍赛</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">唐燕君</li>
-                            <li style="flex: 1; text-align: left;" class="text-gray-800 text-lg">应洪彬</li>
-                        </ul>
                         <h3 class="lang-en font-bold text-l text-gray-600 mb-4"> If you are interested, please contact: </h3>
                         <h3 class="lang-zh font-bold text-l text-gray-600 mb-4" style="display: none;"> 如果您感兴趣，请联系： </h3>
                         <ul class="list-disc list-inside mb-4">
                             <li class="lang-en"><strong>Mrs Tang</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">junetang_1988@qq.com</a>
                             <li class="lang-zh"><strong>唐女士</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">junetang_1988@qq.com</a>
                             </li>
-                            <!-- <li><strong>Peng LU</strong>: <a class="cmt" href="mailto:">s-zhang@comp.nus.edu.sg</a>
-                            </li> -->
                         </ul>
-                        <h3 class="lang-en font-bold text-l text-gray-600"> On behalf of the workshop chair: Prof Beng Chin Ooi. </h3>
-                        <h3 class="lang-zh font-bold text-l text-gray-600" style="display: none;"> 代表研讨会主席：黄铭钧教授 </h3>
 
                     </article>
                 </div>
