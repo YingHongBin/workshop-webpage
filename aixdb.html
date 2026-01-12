@@ -141,6 +141,12 @@
             display: flex;
             flex-wrap: wrap;
         }
+
+        /* Add borders to table cells */
+        table td,
+        table th {
+            border: 1px solid #374151 !important;
+        }
     </style>
     <noscript data-n-css=""></noscript>
 </head>
@@ -164,10 +170,10 @@
                             <h3 class="lang-zh inline-block font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; font-size: 44px; display: none;">Data X AI:<br>系统、智能与应用</h3>
                         </div>
                         <div class="relative hidden md:block flex flex-col" style="align-items: flex-end; padding-top: 20px;">
-                            <h2 class="lang-en font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Zhejiang University, Ningbo, China</h2>
-                            <h2 class="lang-zh font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right; display: none;">浙江大学宁波校区</h2>
-                            <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Jan 26 - Feb 1, 2026</p>
-                            <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right; display: none;">2026年1月26日 - 2月1日</p>
+                            <h2 class="lang-en font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Venue: Zhejiang University, Ningbo, China</h2>
+                            <h2 class="lang-zh font-bold tracking-wide text-2xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">会议地点：浙江大学（宁波）软件学院</h2>
+                            <!-- <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right;">Jan 26 - Feb 1, 2026</p> -->
+                            <!-- <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: right; display: none;">2026年1月26日 - 2月1日</p> -->
                         </div>
                         <div class="relative md:hidden">
                             <h2 class="lang-en inline-block  drop-shadow-lg text-2xl font-extrabold select-none cursor-default" style="color: #ffffff; font-family: 'Cocogoose', sans-serif;">Data X AI:<br> System, Learning, and Application</h2>
@@ -176,8 +182,8 @@
                         <div class="relative md:hidden flex flex-col" style="padding-top: 10px;">
                             <h2 class="lang-en font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Zhejiang University, Ningbo, China</h2>
                             <h2 class="lang-zh font-bold tracking-wide text-xl" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">浙江大学宁波校区</h2>
-                            <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Jan 26 - Feb 1, 2026</p>
-                            <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">2026年1月26日 - 2月1日</p>
+                            <!-- <p class="lang-en text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left;">Jan 26 - Feb 1, 2026</p> -->
+                            <!-- <p class="lang-zh text-lg" style="color: #ffffff; font-family: 'Cocogoose', sans-serif; text-align: left; display: none;">2026年1月26日 - 2月1日</p> -->
                         </div>
                     </div>
                 </div>
@@ -188,15 +194,15 @@
                         <h2 class="lang-en uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Abstract</h2>
                         <h2 class="lang-zh uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">摘要</h2>
                         <p class="lang-en mb-4"> The deep integration of data systems and artificial intelligence is reshaping how data is collected, managed, and transformed into knowledge and decisions. Modern AI workloads, ranging from large language models and multimodal learning to domain-specific analytics, are increasingly data-centric and system-driven, relying on scalable data infrastructures, efficient data pipelines, and robust data governance. In data-intensive domains such as healthcare and enterprise intelligence, these challenges are further amplified by data heterogeneity, quality requirements, privacy constraints, and the need for trustworthy and efficient AI.<br>
-                        The workshop Data × AI: Systems, Learning, and Applications provides a focused forum to explore this convergence from a holistic perspective. It brings together research on system foundations, learning paradigms, and real-world applications. By bridging these layers, the workshop aims to highlight emerging challenges, share principled solutions, and identify open research directions that span the full Data × AI stack.<br>
+                        The workshop <b>Data × AI: Systems, Learning, and Applications</b> provides a focused forum to explore this convergence from a holistic perspective. It brings together research on system foundations, learning paradigms, and real-world applications. By bridging these layers, the workshop aims to highlight emerging challenges, share principled solutions, and identify open research directions that span the full Data × AI stack.<br>
                         We warmly welcome researchers and practitioners from academia and industry to join this workshop. Through invited talks, technical presentations, and open discussions, the workshop seeks to foster cross-disciplinary collaboration across data management, AI, and application domains, and to advance a shared understanding of how Data × AI co-design can enable robust, efficient, and trustworthy intelligent systems.</p>
                         <p class="lang-zh mb-4" style="display: none;"> 数据系统与人工智能的深度融合正在重塑数据的采集、管理以及向知识与决策转化的方式。现代人工智能工作负载涵盖大语言模型、多模态学习以及领域特定分析等，日益呈现出以数据为中心、以系统为驱动的特征，依赖于可扩展的数据基础设施、高效的数据流水线以及健全的数据治理。在医疗健康和商业智能等数据密集型领域中，数据异构性、质量要求、隐私约束以及对可信高效人工智能的需求，使这些挑战进一步加剧。
                         <br>
-                        “Data × AI: 系统、智能与应用”研讨会从整体视角聚焦这一融合趋势，汇聚系统基础、学习范式与实际应用等方面的研究成果。通过贯通这些层面，研讨会旨在揭示新兴挑战，分享有理论支撑的解决思路，并探讨贯穿整个 Data × AI 技术栈的开放性研究方向。
+                        <b>“Data × AI: 系统、智能与应用”</b>研讨会从整体视角聚焦这一融合趋势，汇聚系统基础、学习范式与实际应用等方面的研究成果。通过贯通这些层面，研讨会旨在揭示新兴挑战，分享有理论支撑的解决思路，并探讨贯穿整个 Data × AI 技术栈的开放性研究方向。
                         <br>
                         我们诚挚欢迎来自学术界和工业界的研究人员与实践者参加本次研讨会。通过特邀报告、学术论文展示与开放式讨论，研讨会将促进数据管理、人工智能及应用领域之间的交叉合作，推动形成对 Data × AI 协同设计如何支撑稳健、高效、可信智能系统的共同认识。</p>
-                        <h3 class="lang-en uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h3>
-                        <h3 class="lang-zh uppercase text-xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">研讨会主席</h3>
+                        <h2 class="lang-en uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242">Workshop Chair</h2>
+                        <h2 class="lang-zh uppercase text-3xl font-bold text-gray-900 tracking-wide mb-5 mt-5" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">研讨会主席</h2>
                         <div class="modern-team-card">
                             <div class="team-card-content">
                                 <img src="https://ooibc88.github.io/assets/img/ooibc-800.webp" alt="黄铭钧" class="team-avatar">
@@ -330,9 +336,9 @@
                             <table class="w-full border-collapse bg-white" style="border: 2px solid #374151;">
                                 <thead>
                                     <tr class="bg-[#004B8D] text-white">
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%;">Date</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%;">Time</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%;">Event</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%; border: 1px solid #374151;">Date</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%; border: 1px solid #374151;">Time</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%; border: 1px solid #374151;">Event</th>
                                         <!-- <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 25%;">Speaker</th> -->
                                     </tr>
                                 </thead>
@@ -417,9 +423,9 @@
                             <table class="w-full border-collapse bg-white" style="border: 2px solid #374151;">
                                 <thead>
                                     <tr class="bg-[#004B8D] text-white">
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%;">日期</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%;">时间</th>
-                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%;">活动</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 12%; border: 1px solid #374151;">日期</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" colspan="2" style="text-align: center; width: 25%; border: 1px solid #374151;">时间</th>
+                                        <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 38%; border: 1px solid #374151;">活动</th>
                                         <!-- <th class="px-6 py-4 text-left font-bold text-lg tracking-wide border-b-2 border-[#004B8D]" style="text-align: center; width: 25%;">演讲者</th> -->
                                     </tr>
                                 </thead>
@@ -572,8 +578,8 @@
                             Contact Information</h2>
                         <h2 class="lang-zh uppercase text-3xl font-bold text-black-600 tracking-wide mb-5 mt-8" style="font-family: 'Cocogoose', sans-serif;color: #ec5242; display: none;">
                             联系信息</h2>
-                        <h3 class="lang-en font-bold text-l text-gray-600 mb-4"> If you are interested, please contact: </h3>
-                        <h3 class="lang-zh font-bold text-l text-gray-600 mb-4" style="display: none;"> 如果您感兴趣，请联系： </h3>
+                        <h3 class="lang-en font-bold text-l text-gray-600 mb-4"> If you need contact, please email:: </h3>
+                        <h3 class="lang-zh font-bold text-l text-gray-600 mb-4" style="display: none;"> 如果您需要联系，请发送邮件至： </h3>
                         <ul class="list-disc list-inside mb-4">
                             <li class="lang-en"><strong>Mrs Tang</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">junetang_1988@qq.com</a>
                             <li class="lang-zh"><strong>唐女士</strong>: <a class="cmt" href="mailto:xiezl@zju.edu.cn">junetang_1988@qq.com</a>
@@ -586,7 +592,7 @@
         </main>
         <footer class="max-w-[70em] mx-auto pt-8 pb-32 w-full">
             <div class="mx-5 flex flex-col md:flex-row gap-y-2 lg:px-0 items-start justify-between text-gray-600"><small
-                    class=""><span class="font-defaultSans">©</span> Data X AI &nbsp | &nbsp <a class="cmt" href="https://www.nbdataxai.com/">ZJU Data System Research Group</a>&nbsp | &nbsp <a class="cmt" href="https://www.comp.nus.edu.sg/~dbsystem/">NUS DBSystem Research Group</a>
+                    class=""><span class="font-defaultSans">©</span> Data X AI &nbsp | &nbsp <a class="cmt" href="https://www.nbdataxai.com/">ZJU Data System Research Group</a>&nbsp
                 </small>
             </div>
         </footer>
