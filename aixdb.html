@@ -499,13 +499,23 @@
                                        data-placeholder-en="Enter your email address"
                                        data-placeholder-zh="请输入您的电子邮箱">
                             </div>
+                            <blockquote style="margin-bottom: 20px;">
+                                <p class="lang-zh font-bold text-l text-gray-600"> 注：参会者根据报名注册信息提供自助午餐 </p>
+                                <p class="lang-en font-bold text-l text-gray-600"> Note: Participants will be provided with a buffet lunch based on the registration information </p>
+                            </blockquote>
                             
                             <button type="submit" 
-                                    class="lang-en w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline;">
+                                    class="lang-en w-full font-bold transition-colors duration-200" 
+                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-top: 20px;"
+                                    onmouseover="this.style.backgroundColor='#111111'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';"
+                                    onmouseout="this.style.backgroundColor='##333333'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
                                 Submit Registration
                             </button>
                             <button type="submit" 
-                                    class="lang-zh w-full bg-[#004B8D] text-white font-bold py-3 px-6 rounded-md hover:bg-[#003666] transition-colors duration-200" style="font-family: Lato; font-style: italic; text-decoration: underline; display: none;">
+                                    class="lang-zh w-full font-bold transition-colors duration-200" 
+                                    style="background-color: #333333; color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: none; margin-top: 20px;"
+                                    onmouseover="this.style.backgroundColor='#111111'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';"
+                                    onmouseout="this.style.backgroundColor='#333333'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';">
                                 提交报名
                             </button>
                         </form>
