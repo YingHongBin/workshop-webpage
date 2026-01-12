@@ -530,7 +530,7 @@
                                 <p class="lang-zh font-bold text-l text-gray-600" style="text-align: left;"> 参会者根据报名注册信息提供自助午餐 </p>
                                 <p class="lang-en font-bold text-l text-gray-600" style="text-align: left;"> Participants will be provided with a buffet lunch based on the registration information </p>
                             </blockquote>
-                        <form class="mb-8 bg-white p-6 rounded-lg shadow-md max-w-2xl">
+                        <form id="registrationForm" class="mb-8 bg-white p-6 rounded-lg shadow-md max-w-2xl">
                             <div class="mb-4">
                                 <label for="name" class="lang-en block text-gray-700 font-semibold mb-2">Name *</label>
                                 <label for="name" class="lang-zh block text-gray-700 font-semibold mb-2" style="display: none;">姓名 *</label>
@@ -649,6 +649,70 @@ function switchLanguage(lang) {
 window.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     switchLanguage(savedLang);
+});
+
+// Handle registration form submission
+document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitButtons = this.querySelectorAll('button[type="submit"]');
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    // Disable submit buttons
+    submitButtons.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.6';
+        btn.style.cursor = 'not-allowed';
+    });
+    
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value.trim(),
+        mobile: document.getElementById('mobile').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        affiliation: document.getElementById('affiliation').value.trim()
+    };
+    
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            // Success message
+            const message = currentLang === 'en' 
+                ? 'Registration successful! Thank you for registering.' 
+                : '注册成功！感谢您的报名。';
+            alert(message);
+            // Reset form
+            this.reset();
+        } else {
+            // Error message
+            const message = currentLang === 'en' 
+                ? `Registration failed: ${result.message}` 
+                : `注册失败：${result.message}`;
+            alert(message);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        const message = currentLang === 'en' 
+            ? 'Network error. Please make sure the backend server is running and try again.' 
+            : '网络错误。请确保后端服务正在运行，然后重试。';
+        alert(message);
+    } finally {
+        // Re-enable submit buttons
+        submitButtons.forEach(btn => {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.style.cursor = 'pointer';
+        });
+    }
 });
 </script>
 </body>
